@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.8.4
+Created-By: 1.6.0_29-b11 (Sun Microsystems Inc.)
+built-by: Akshit
+Main-Class: app_kvClient.KVClient
+Class-Path: ${project.classpath}
+
