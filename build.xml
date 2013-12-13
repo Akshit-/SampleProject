@@ -116,12 +116,11 @@
 			<formatter type="xml"/>
 			
             <batchtest fork="yes" todir="${reports.dir}">
-                <fileset dir="${src.dir}" includes="testing/StorageTest.java"/>
+                <fileset dir="${src.dir}" includes="testing/*.java"/>
             </batchtest>
         </junit>
     </target>
 	      
-
   <target name="run" >  
     <java classname="${main.class}" classpathref="class.path"/>  
   </target> 
