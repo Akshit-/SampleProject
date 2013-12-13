@@ -112,9 +112,7 @@
     <target name="test" depends="build">
         <junit printsummary="yes">
             <classpath refid="project.classpath" />
-            
 			<formatter type="xml"/>
-			
             <batchtest fork="yes" todir="${reports.dir}">
                 <fileset dir="${src.dir}" includes="testing/MarshallingTest.java"/>
 				<fileset dir="${src.dir}" includes="testing/StorageTest.java"/>
