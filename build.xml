@@ -116,21 +116,22 @@
   <report format="frames" todir="./report/html"/>
 </junitreport>
 	
-  <!-- run test cases -->
-  <target name="test" depends="build">
-	<junitreport todir="${reports}">
-		<fileset dir="${reports}/">
-			<include name="TEST-*.xml" />
+
+  
+  <junit printsummary="yes" haltonfailure="yes" showoutput="yes" >
+	<classpath>
+		<pathelement path="${build}"/>
+		<fileset dir="lib">
+			<include name="**/*.jar"/>
 		</fileset>
-		<report format="noframes" todir="${reports}\" />
-	</junitreport>
-	
-	<junit printsummary="yes" haltonfailure="yes" showoutput="yes">
-      <classpath refid="project.classpath" />
-      <formatter type="brief" usefile="false" />
-      <test name="testing.MarshallingTest" />
-    </junit>
-  </target>
+	</classpath>
+ 	<batchtest fork="yes" todir="${reports}/">
+		<formatter type="xml"/>
+ 		<fileset dir="${src}">
+			<include name="testing.MarshallingTest.java"/>
+		</fileset>
+	</batchtest>
+</junit>
   
 
   <target name="run" >  
