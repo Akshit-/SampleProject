@@ -117,7 +117,7 @@
                 <fileset dir="${src.dir}">
 					<include name="**/testing/StorageTest.java"/>
 					<include name="**/testing/MarshallingTest.java"/>
-					<include name="**/testing/InteractionTest.java"/>
+					<include name="**/testing/Connectiontest.java"/>
 				</fileset>
             </batchtest>
         </junit>
