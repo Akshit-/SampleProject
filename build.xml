@@ -111,7 +111,7 @@
     <junit>
       <classpath refid="project.classpath" />
       <formatter type="brief" usefile="false" />
-      <test name="testing.ConnectionTest" />
+      <test name="testing.StorageTest" />
     </junit>
   </target>
 
