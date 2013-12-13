@@ -117,6 +117,7 @@
                 <fileset dir="${src.dir}">
 					<include name="testing.StorageTest.java"/>
 					<include name="testing.MarshallingTest.java"/>				
+				</fileset>
             </batchtest>
         </junit>
     </target>
