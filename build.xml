@@ -120,9 +120,7 @@
             </batchtest>
         </junit>
     </target>
-	    
-    </target>
-  
+	      
 
   <target name="run" >  
     <java classname="${main.class}" classpathref="class.path"/>  
