@@ -121,7 +121,7 @@
   <junit printsummary="yes" haltonfailure="yes" showoutput="yes" >
 	<classpath>
 		<pathelement path="${build}"/>
-		<fileset dir="lib">
+		<fileset dir="${lib.dir}">
 			<include name="**/*.jar"/>
 		</fileset>
 	</classpath>
