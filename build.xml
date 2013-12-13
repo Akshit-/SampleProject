@@ -111,7 +111,7 @@
     <junit>
       <classpath refid="project.classpath" />
       <formatter type="brief" usefile="false" />
-      <test name="testing.StorageTest" />
+      <test name="testing.MarshallingTest" />
     </junit>
   </target>
 
