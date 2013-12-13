@@ -116,7 +116,8 @@
 			<formatter type="xml"/>
 			
             <batchtest fork="yes" todir="${reports.dir}">
-                <fileset dir="${src.dir}" includes="testing/*.java"/>
+                <fileset dir="${src.dir}" includes="testing/MarshallingTest.java"/>
+				<fileset dir="${src.dir}" includes="testing/StorageTest.java"/>
             </batchtest>
         </junit>
     </target>
