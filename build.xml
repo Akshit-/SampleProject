@@ -9,7 +9,7 @@
   <property name="build.dir"     value="bin"/>
   <property name="src.dir"       value="src"/>
   <property name="lib.dir"       value="libs"/>
-  <property name="reports" 		location="reports" />
+  <property name="reports.dir" 		location="reports" />
   
   <!-- Configuration for client application -->
   <property name="clientjar.file"      value="ms2-client.jar"/>
