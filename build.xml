@@ -114,11 +114,9 @@
             <classpath refid="project.classpath" />
 			<formatter type="xml"/>
             <batchtest fork="yes" todir="${reports.dir}">
-                
-				<fileset file="${src.dir}/testing/StorageTest.java" />
-				<fileset file="${src.dir}/testing/MarshallingTest.java"/>
-				<fileset file="${src.dir}/testing/InteractionTest.java"/>
-				
+                <fileset dir="${src.dir}">
+					<include name="testing.StorageTest.java"/>
+					<include name="testing.MarshallingTest.java"/>				
             </batchtest>
         </junit>
     </target>
