@@ -9,7 +9,7 @@
   <property name="build.dir"     value="bin"/>
   <property name="src.dir"       value="src"/>
   <property name="lib.dir"       value="libs"/>
-  <property name="reports.dir" 		location="reports" />
+  <property name="reports.dir" 		value="reports/" />
   
   <!-- Configuration for client application -->
   <property name="clientjar.file"      value="ms2-client.jar"/>
@@ -40,7 +40,6 @@
 
   <target name="init">
     <mkdir dir="${build.dir}"/>
-	<mkdir dir="${reports}" />
     <copy includeemptydirs="false" todir="${build.dir}">
       <fileset dir="${src.dir}">
         <exclude name="**/*.launch"/>
@@ -111,22 +110,17 @@
 
     
     <target name="test" depends="build">
-		<mkdir dir="${reports.dir}"/>
         <junit printsummary="yes">
             <classpath refid="project.classpath" />
             
 			<formatter type="xml"/>
 			
             <batchtest fork="yes" todir="${reports.dir}">
-                <fileset dir="${src.dir}" includes="/StorageTest.java"/>
+                <fileset dir="${src.dir}" includes="testing/StorageTest.java"/>
             </batchtest>
         </junit>
     </target>
-	    <target name="junitreport">
-        <junitreport todir="${reports.dir}">
-            <fileset dir="${reports.dir}" includes="TEST-*.xml"/>
-            <report todir="${reports.dir}"/>
-        </junitreport>
+	    
     </target>
   
 
