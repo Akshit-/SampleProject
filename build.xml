@@ -116,7 +116,8 @@
             <batchtest fork="yes" todir="${reports.dir}">
                 <fileset dir="${src.dir}">
 					<include name="**/testing/StorageTest.java"/>
-					
+					<include name="**/testing/MarshallingTest.java"/>
+					<include name="**/testing/InteractionTest.java"/>
 				</fileset>
             </batchtest>
         </junit>
