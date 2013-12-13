@@ -9,6 +9,7 @@
   <property name="build.dir"     value="bin"/>
   <property name="src.dir"       value="src"/>
   <property name="lib.dir"       value="libs"/>
+  <property name="reports" 		location="reports" />
   
   <!-- Configuration for client application -->
   <property name="clientjar.file"      value="ms2-client.jar"/>
@@ -39,6 +40,7 @@
 
   <target name="init">
     <mkdir dir="${build.dir}"/>
+	<mkdir dir="${reports}" />
     <copy includeemptydirs="false" todir="${build.dir}">
       <fileset dir="${src.dir}">
         <exclude name="**/*.launch"/>
@@ -53,6 +55,7 @@
     <delete file="${clientmanifest.file}" />
     <delete file="${serverjar.file}" />
     <delete file="${servermanifest.file}" />
+	<delete dir="${reports}" />
   </target>
 
   <target name="cleanall" depends="clean"/>
@@ -115,7 +118,14 @@
 	
   <!-- run test cases -->
   <target name="test" depends="build">
-    <junit>
+	<junitreport todir="${reports}">
+		<fileset dir="${reports}/">
+			<include name="TEST-*.xml" />
+		</fileset>
+		<report format="noframes" todir="${reports}\" />
+	</junitreport>
+	
+	<junit printsummary="yes" haltonfailure="yes" showoutput="yes">
       <classpath refid="project.classpath" />
       <formatter type="brief" usefile="false" />
       <test name="testing.MarshallingTest" />
