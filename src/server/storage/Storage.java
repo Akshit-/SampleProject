@@ -73,9 +73,7 @@ public class Storage {
 
 		String result = data.get(key);
 		logger.debug("Retrieved kvpair:" + key + "," + result);
-		//return result;
-		return "100";
-
+		return result;
 	}
 
 	/**
