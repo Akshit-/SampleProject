@@ -109,7 +109,7 @@
   <target name="build-jar" depends="build-client-jar, build-server-jar" />
 
     
-    <target name="test" depends="build">
+    <target name="test">
         <junit printsummary="yes">
             <classpath refid="project.classpath" />
 			<formatter type="xml"/>
