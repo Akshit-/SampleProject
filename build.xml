@@ -54,7 +54,7 @@
     <delete file="${clientmanifest.file}" />
     <delete file="${serverjar.file}" />
     <delete file="${servermanifest.file}" />
-	<delete dir="${reports}" />
+	<delete dir="${reports.dir}" />
   </target>
 
   <target name="cleanall" depends="clean"/>
