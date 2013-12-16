@@ -54,9 +54,8 @@ public class StorageTest extends TestCase {
 	@Test
 	public void testRetrieve() {
 		String result = storage.get("key");
-		String expResult = "abcd";
+		String expResult = "abc";
 		assertEquals(result, expResult);
-		//assertTrue(result.equals("abcd"));
 	}
 
 }
