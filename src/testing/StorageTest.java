@@ -46,7 +46,7 @@ public class StorageTest extends TestCase {
 	public void testStoreUpdate() {
 		String result = storage.put("key", "v1");
 
-		result = storage.put("key", "abc");
+		result = storage.put("key1", "abc");
 		
 		assertTrue(result.equals("v1"));
 	}
@@ -55,7 +55,7 @@ public class StorageTest extends TestCase {
 	public void testRetrieve() {
 		String result = storage.get("key");
 		
-		String expResult = "abcdefgh";
+		String expResult = "abc";
 		
 		assertEquals(result, expResult);
 	}
